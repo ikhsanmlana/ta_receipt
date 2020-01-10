@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="767.0" prefWidth="548.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Result">
+   <children>
+      <Label layoutX="167.0" layoutY="38.0" text="AEON SUSHI">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="128.0" text="No. Struk">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="165.0" text="Tgl  Struk">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="205.0" text="Kassa">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="243.0" text="Wter/Kasir">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="52.0" layoutY="292.0" prefHeight="12.0" prefWidth="452.0" />
+      <Label layoutX="158.0" layoutY="127.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="158.0" layoutY="165.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="158.0" layoutY="205.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="240.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="175.0" layoutY="206.0" prefHeight="30.0" prefWidth="73.0" text="1 / -">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="175.0" layoutY="242.0" prefHeight="30.0" prefWidth="99.0" text="Administ /">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="275.0" layoutY="242.0" prefHeight="30.0" prefWidth="153.0" text="Name">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="175.0" layoutY="167.0" prefHeight="30.0" prefWidth="302.0" text="Date">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="orderLabel" layoutX="175.0" layoutY="128.0" prefHeight="30.0" prefWidth="302.0" text="orderID">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="52.0" layoutY="528.0" prefHeight="12.0" prefWidth="452.0" />
+      <Label layoutX="59.0" layoutY="539.0" text="GrandTotal">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="576.0" text="Bayar">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="616.0" text="Cash">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="654.0" text="Kemballian">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="158.0" layoutY="538.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="158.0" layoutY="576.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="158.0" layoutY="616.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="652.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="cashLabel" layoutX="375.0" layoutY="617.0" prefHeight="30.0" prefWidth="135.0" text="-">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="kembalianLabel" layoutX="375.0" layoutY="653.0" prefHeight="30.0" prefWidth="142.0" text="-">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="bayarLabel" layoutX="375.0" layoutY="578.0" prefHeight="30.0" prefWidth="142.0" text="-">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalLabel" layoutX="375.0" layoutY="539.0" prefHeight="30.0" prefWidth="153.0" text="-">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="701.0" text="Terima kasih atas kunjungan anda">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ListView fx:id="orders" layoutX="52.0" layoutY="313.0" prefHeight="200.0" prefWidth="452.0" />
+   </children>
+</AnchorPane>
