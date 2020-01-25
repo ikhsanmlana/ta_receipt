@@ -35,5 +35,6 @@
       <Label fx:id="phoneLabel" layoutX="80.0" layoutY="226.0" prefHeight="21.0" prefWidth="109.0" text="Phone Number:" />
       <TextField fx:id="addressField" layoutX="198.0" layoutY="271.0" prefHeight="68.0" prefWidth="275.0" />
       <Label fx:id="addressLabel" layoutX="129.0" layoutY="274.0" prefHeight="21.0" prefWidth="67.0" text="Address:" />
+      <Button layoutX="31.0" layoutY="27.0" mnemonicParsing="false" onAction="#branchback" prefHeight="31.0" prefWidth="75.0" text="Back" />
     </children>
 </AnchorPane>

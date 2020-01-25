@@ -56,4 +56,14 @@ public class Branch {
         }
     }
 
+    @FXML
+    public void branchback(ActionEvent actionEvent) throws IOException{
+        Parent viewBranch = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+        Scene sceneBranch = new Scene(viewBranch);
+
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(sceneBranch);
+        window.show();
+    }
 }
