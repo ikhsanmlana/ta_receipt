@@ -121,7 +121,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="cashLabel" layoutX="375.0" layoutY="617.0" prefHeight="30.0" prefWidth="135.0" text="-">
+      <Label fx:id="cashLabel" layoutX="275.0" layoutY="617.0" prefHeight="30.0" prefWidth="106.0" text="-">
          <font>
             <Font size="20.0" />
          </font>
@@ -141,7 +141,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="131.0" layoutY="701.0" text="Terima kasih atas kunjungan anda">
+      <Label layoutX="122.0" layoutY="701.0" text="Terima kasih atas kunjungan anda">
          <font>
             <Font size="20.0" />
          </font>

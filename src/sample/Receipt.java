@@ -46,6 +46,7 @@ public class Receipt {
     public int totalPrice;
     public String type;
     public int orderID;
+    public String branchID;
 
     public String allItems = "";
     Timestamp timestamp = new Timestamp(System.currentTimeMillis());
@@ -147,13 +148,22 @@ public class Receipt {
 
 
             items.clear();
-            Parent viewBranch = FXMLLoader.load(getClass().getResource("result.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("result.fxml"));
+            Parent viewBranch = loader.load();
 
             Scene sceneBranch = new Scene(viewBranch);
 
-            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Result controller = loader.getController();
+            controller.initTop(cityName.getText(), orderID, formattedDate, Integer.parseInt(IDField.getText()));
+            controller.initBot(totalPrice, Integer.parseInt(cashField.getText()));
+            controller.allOrders();
+
+            Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
             window.setScene(sceneBranch);
             window.show();
+
+
         }
 
 
@@ -200,6 +210,7 @@ public class Receipt {
             ResultSet resultSet = statement.executeQuery(sql);
             while(resultSet.next()){
                 cityID.setText(resultSet.getString(1));
+
             }
 
 
@@ -207,6 +218,7 @@ public class Receipt {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void buttonback(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader();
