@@ -49,7 +49,9 @@ public class Receipt {
     public String branchID;
 
     public String allItems = "";
-    Timestamp timestamp = new Timestamp(System.currentTimeMillis()); // TIMESTAMP IN DBTA.1EZ.XYZ SERVER HAS A DIFFERENT TIMEZONE
+    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+    // TIMESTAMP IN DBTA.1EZ.XYZ SERVER HAS A DIFFERENT TIMEZONE
+    // CURRENT TIME INDONESIA: 3 pm -- CURRENT TIME DBTA SERVER: 8 AM
 
     public void addItem(ActionEvent actionEvent) {
         if (priceField.getText().trim().isEmpty()|| qtyField.getText().trim().isEmpty()){
@@ -138,8 +140,8 @@ public class Receipt {
                 while (rs.next()) {
                     orderID = (rs.getInt(1));
                 }
-                System.out.println(formattedDate);
-                System.out.println(orderID);
+                System.out.println(formattedDate); // CURRENT TIME INDONESIA: 3 pm -- CURRENT TIME DBTA SERVER: 8 AM
+//                System.out.println(orderID);
                 preparedStatement = (PreparedStatement) connection.prepareStatement(sql3);
                 preparedStatement.setInt(1, orderID);
                 preparedStatement.executeUpdate();
