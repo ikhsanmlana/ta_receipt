@@ -66,7 +66,7 @@ public class Result {
         ConnectionClass connectionClass = new ConnectionClass();
         Connection connection = connectionClass.getConnection();
 
-        String sql = "SELECT employeeName FROM employee WHERE employeeID = '"+employeeID+"' ;";
+        String sql = "SELECT employeeName FROM Employee WHERE employeeID = '"+employeeID+"' ;";
         Statement statement = null;
         try {
             statement = connection.createStatement();
@@ -96,7 +96,7 @@ public class Result {
         ConnectionClass connectionClass = new ConnectionClass();
         Connection connection = connectionClass.getConnection();
 
-        String sql = "SELECT orderItemName, quantity, itemPrice FROM orderItem WHERE orderID = '"+order+"' ORDER BY itemPrice ASC;";
+        String sql = "SELECT orderItemName, quantity, itemPrice FROM OrderItem WHERE orderID = '"+order+"' ORDER BY itemPrice ASC;";
 
         Statement statement = null;
 
@@ -121,6 +121,23 @@ public class Result {
             e.printStackTrace();
         }
 
+
+    }
+
+    @FXML
+    public void report(ActionEvent actionEvent) throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("report.fxml"));
+        Parent viewBranch = loader.load();
+
+        Scene sceneBranch = new Scene(viewBranch);
+
+        report controller = loader.getController();
+        controller.allOrders(cityName);
+
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(sceneBranch);
+        window.show();
 
     }
 }

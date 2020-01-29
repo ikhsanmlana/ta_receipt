@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="85%">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Requirements Queries (GROUP BY) Left">
+      <change afterPath="$PROJECT_DIR$/src/sample/report.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/report.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/receipt_project/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/receipt_project/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/receipt_project/sample/Receipt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/receipt_project/sample/Receipt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/receipt_project/sample/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/receipt_project/sample/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/receipt_project/sample/receipt.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/receipt_project/sample/receipt.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/receipt_project/sample/result.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/receipt_project/sample/result.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/receipt_project/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/receipt_project/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Receipt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/receipt.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/receipt.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/result.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/result.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,12 +99,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sample" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ikhsan M\IdeaProjects\receipt_project\src\sample" />
       <recent name="C:\Users\Ikhsan M\IdeaProjects\receipt_project\lib" />
     </key>
   </component>
@@ -203,7 +213,8 @@
       <workItem from="1579762154974" duration="139000" />
       <workItem from="1579883433079" duration="4058000" />
       <workItem from="1579942099982" duration="16632000" />
-      <workItem from="1580137442203" duration="5626000" />
+      <workItem from="1580137442203" duration="5792000" />
+      <workItem from="1580272288773" duration="8894000" />
     </task>
     <task id="LOCAL-00001" summary="85%">
       <created>1579987810870</created>
@@ -212,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579987810870</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Requirements Queries (GROUP BY) Left">
+      <created>1580147305249</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580147305249</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +253,7 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="85%" />
-    <option name="LAST_COMMIT_MESSAGE" value="85%" />
+    <MESSAGE value="Requirements Queries (GROUP BY) Left" />
+    <option name="LAST_COMMIT_MESSAGE" value="Requirements Queries (GROUP BY) Left" />
   </component>
 </project>

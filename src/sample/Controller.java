@@ -77,7 +77,7 @@ public class Controller {
         ConnectionClass connectionClass = new ConnectionClass();
         Connection connection = connectionClass.getConnection();
 
-        String sql = "SELECT * FROM city;";
+        String sql = "SELECT * FROM City;";
         Statement statement = null;
         try {
             statement = connection.createStatement();

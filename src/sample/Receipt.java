@@ -76,7 +76,7 @@ public class Receipt {
             Connection connection = connectionClass.getConnection();
 
 
-            String sql = "INSERT INTO orderitem (orderItemName, typeID, quantity, itemPrice) VALUES (?,?,?,?)";
+            String sql = "INSERT INTO Orderitem (orderItemName, typeID, quantity, itemPrice) VALUES (?,?,?,?)";
 //        Statement statement = null;
             PreparedStatement preparedStatement = null;
 
@@ -116,9 +116,9 @@ public class Receipt {
             date.setTime(timestamp.getTime());
             String formattedDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
 
-            String sql = "INSERT INTO orders (orderItem, orderTime, employeeID, totalPrice, branchID) VALUES (?,?,?,?,?)";
-            String sql2 = "SELECT orderID FROM orders WHERE orderTime = '"+formattedDate+"';";
-            String sql3 = "UPDATE orderItem SET orderID = ? WHERE orderID is null";
+            String sql = "INSERT INTO Orders (orderItem, orderTime, employeeID, totalPrice, branchID) VALUES (?,?,?,?,?)";
+            String sql2 = "SELECT OrderID FROM orders WHERE orderTime = '"+formattedDate+"';";
+            String sql3 = "UPDATE OrderItem SET orderID = ? WHERE orderID is null";
             PreparedStatement preparedStatement = null;
             Statement statement = null;
 
@@ -173,7 +173,7 @@ public class Receipt {
         ConnectionClass connectionClass = new ConnectionClass();
         Connection connection = connectionClass.getConnection();
 
-        String sql = "SELECT * FROM type;";
+        String sql = "SELECT * FROM Type;";
         Statement statement = null;
         try {
             statement = connection.createStatement();
@@ -229,6 +229,23 @@ public class Receipt {
 
         Controller controller = loader.getController();
         controller.setChoices();
+
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(sceneBranch);
+        window.show();
+    }
+
+    @FXML
+    public void report(ActionEvent actionEvent) throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("report.fxml"));
+        Parent viewBranch = loader.load();
+
+        Scene sceneBranch = new Scene(viewBranch);
+
+        report controller = loader.getController();
+//        controller.initOrderID(orderID);
+        controller.allOrders(cityName.getText());
 
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(sceneBranch);
