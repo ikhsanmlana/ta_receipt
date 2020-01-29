@@ -49,13 +49,14 @@ public class Receipt {
     public String branchID;
 
     public String allItems = "";
-    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+    Timestamp timestamp = new Timestamp(System.currentTimeMillis()); // TIMESTAMP IN DBTA.1EZ.XYZ SERVER HAS A DIFFERENT TIMEZONE
 
     public void addItem(ActionEvent actionEvent) {
         if (priceField.getText().trim().isEmpty()|| qtyField.getText().trim().isEmpty()){
             System.out.println("Fill the fields");
         }
         else {
+            System.out.println(timestamp);
             items.add(itemField.getText());
             int price = Integer.parseInt(priceField.getText());
             int amt = Integer.parseInt(qtyField.getText());
@@ -76,7 +77,7 @@ public class Receipt {
             Connection connection = connectionClass.getConnection();
 
 
-            String sql = "INSERT INTO Orderitem (orderItemName, typeID, quantity, itemPrice) VALUES (?,?,?,?)";
+            String sql = "INSERT INTO OrderItem (orderItemName, typeID, quantity, itemPrice) VALUES (?,?,?,?)";
 //        Statement statement = null;
             PreparedStatement preparedStatement = null;
 
@@ -117,7 +118,7 @@ public class Receipt {
             String formattedDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
 
             String sql = "INSERT INTO Orders (orderItem, orderTime, employeeID, totalPrice, branchID) VALUES (?,?,?,?,?)";
-            String sql2 = "SELECT OrderID FROM orders WHERE orderTime = '"+formattedDate+"';";
+            String sql2 = "SELECT orderID FROM Orders ORDER BY orderID DESC LIMIT 1;";
             String sql3 = "UPDATE OrderItem SET orderID = ? WHERE orderID is null";
             PreparedStatement preparedStatement = null;
             Statement statement = null;
@@ -131,11 +132,13 @@ public class Receipt {
                 preparedStatement.setInt(5, Integer.parseInt(cityID.getText()));
                 preparedStatement.executeUpdate();
 
+
                 statement = connection.createStatement();
                 ResultSet rs = statement.executeQuery(sql2);
                 while (rs.next()) {
                     orderID = (rs.getInt(1));
                 }
+                System.out.println(formattedDate);
                 System.out.println(orderID);
                 preparedStatement = (PreparedStatement) connection.prepareStatement(sql3);
                 preparedStatement.setInt(1, orderID);
